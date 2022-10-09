@@ -1,10 +1,11 @@
 package linkedLists.intersectionOfLinkeLists;
 
 public class Node {
-    int id;
+    int val;
     Node next;
 
-    public Node(int id) {
-        this.id = id;
+    public Node(int val) {
+        this.val = val;
+        next = null;
     }
 }
