@@ -5,7 +5,7 @@ public class RomanToInteger2 {
         String roman = "XIV";
         System.out.println(romanToInt(roman));
     }
-    
+
     public static int romanToInt(String s) {
         int result = 0;
         int lastValue = 0;
