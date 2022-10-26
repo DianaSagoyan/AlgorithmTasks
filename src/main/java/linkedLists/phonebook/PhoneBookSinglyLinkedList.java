@@ -2,6 +2,7 @@ package linkedLists.phonebook;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PhoneBookSinglyLinkedList {
     public PhoneBookNode head;
@@ -18,8 +19,10 @@ public class PhoneBookSinglyLinkedList {
 
     public void printPhoneBook(){
         PhoneBookNode current = head;
+        if(isEmpty()) throw new NoSuchElementException();
+
         while (current != null){
-            System.out.println(current);
+            System.out.println(current.contact);
             current = current.next;
         }
     }
@@ -28,17 +31,19 @@ public class PhoneBookSinglyLinkedList {
         PhoneBookNode newContact = new PhoneBookNode(contact);
         if(isEmpty()){
             head = tail = newContact;
-            size++;
         }
         else{
             tail.next = newContact;
             tail = newContact;
-            size++;
         }
+        size++;
     }
 
     public PhoneBookNode findByFirstName(String firstName){
         PhoneBookNode current = head;
+
+        if(isEmpty()) throw new NoSuchElementException();
+
         while (current != null){
             if(current.contact.firstName.equals(firstName)) return current;
             current = current.next;
@@ -49,6 +54,8 @@ public class PhoneBookSinglyLinkedList {
     public List<PhoneBookNode> findAllByLastName(String lastName){
 
         List<PhoneBookNode> list = new ArrayList<>();
+
+        if(isEmpty()) throw new NoSuchElementException();
 
         PhoneBookNode current = head;
         while(current != null){
@@ -62,15 +69,16 @@ public class PhoneBookSinglyLinkedList {
         PhoneBookNode previous = head;
         PhoneBookNode current = head;
 
+        if(isEmpty()) throw new NoSuchElementException();
+
         while (current != null){
             if(current.contact.firstName.equals(firstName)){
                 if(current == head) {
                     head = current.next;
-                    current.next = null;
 
                 }else if(current == tail){
                     tail = previous;
-                    previous.next = null;
+                    tail.next = null;
 
                 }else{
                     previous.next = current.next;
@@ -89,8 +97,10 @@ public class PhoneBookSinglyLinkedList {
         PhoneBookNode previous = head;
         PhoneBookNode current = head;
 
+        if(isEmpty()) throw new NoSuchElementException();
+
         while (current != null) {
-            if (current.contact.firstName.equals(lastName)) {
+            if (current.contact.lastName.equals(lastName)) {
                 if (current == head) {
                     head = current.next;
                     current.next = null;
@@ -115,6 +125,8 @@ public class PhoneBookSinglyLinkedList {
     public List<PhoneBookNode> findAll(){
         List<PhoneBookNode> list = new ArrayList<>();
         PhoneBookNode current = head;
+
+        if(isEmpty()) throw new NoSuchElementException();
 
         while (current != null){
             list.add(current);

@@ -23,7 +23,6 @@ public class TimeNeededToBuyTickets {
             }
 
         }
-
         return count;
     }
 }
