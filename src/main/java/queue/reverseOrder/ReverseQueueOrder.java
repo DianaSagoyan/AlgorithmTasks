@@ -8,8 +8,6 @@ import java.util.Stack;
 public class ReverseQueueOrder {
     public static void main(String[] args) {
 
-        Queue<Integer> q = new LinkedList<>(Arrays.asList(10, 20, 30, 40, 50));
-
        MyQueue<Integer> queue = new MyQueue<>();
        queue.enqueue(10);
        queue.enqueue(20);
@@ -19,12 +17,11 @@ public class ReverseQueueOrder {
 
        int numsOfElem = 4;
 
-        System.out.println(reverseQueueOrder(queue, numsOfElem));
+        reverseQueueOrder(queue, numsOfElem);
 
-//        System.out.println(q);
     }
 
-    public static MyQueue<Integer> reverseQueueOrder(MyQueue<Integer> queue, int k){
+    public static void reverseQueueOrder(MyQueue<Integer> queue, int k){
 
         MyQueue<Integer> result = new MyQueue<>();
         Stack<Integer> stack = new Stack<>();
@@ -43,7 +40,7 @@ public class ReverseQueueOrder {
        while (!queue.isEmpty()){
            result.enqueue(queue.dequeue());
        }
-        return result;
+        result.print();
     }
 
 }
