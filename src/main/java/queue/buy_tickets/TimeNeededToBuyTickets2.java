@@ -1,4 +1,4 @@
-package queue;
+package queue.buy_tickets;
 
 public class TimeNeededToBuyTickets2 {
     public static void main(String[] args) {
