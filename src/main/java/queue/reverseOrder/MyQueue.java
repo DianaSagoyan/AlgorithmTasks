@@ -53,7 +53,7 @@ public class MyQueue <T>{
         while (current != null){
             if(current.next == null) System.out.print(current.value);
             else {
-                System.out.print(current.value + "=>");
+                System.out.print(current.value + ", ");
             }
             current = current.next;
         }
