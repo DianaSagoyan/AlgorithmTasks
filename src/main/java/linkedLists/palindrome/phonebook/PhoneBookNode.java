@@ -1,4 +1,4 @@
-package linkedLists.phonebook;
+package linkedLists.palindrome.phonebook;
 
 public class PhoneBookNode {
     public Contact contact;

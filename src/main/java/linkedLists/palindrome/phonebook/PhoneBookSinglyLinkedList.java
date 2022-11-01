@@ -1,4 +1,4 @@
-package linkedLists.phonebook;
+package linkedLists.palindrome.phonebook;
 
 import java.util.ArrayList;
 import java.util.List;
