@@ -1,8 +1,6 @@
 package linkedLists.delete_n_nodes_after_m_nodes;
 
-import java.util.NoSuchElementException;
-
-public class DeleteNNodesAfterMNodes {
+public class DeleteNNodesAfterMNodes2 {
     public static void main(String[] args) {
         Node node1 = new Node(1);
         Node node2 = new Node(2);
@@ -37,40 +35,26 @@ public class DeleteNNodesAfterMNodes {
     }
 
     public static void deleteNNodesAfterMNodes(Node nodeHead, int m, int n){
-        int count = n;
-        Node current = nodeHead;
-        Node previous = nodeHead;
+        Node currentNode = nodeHead;
+        Node lastMNode = nodeHead;
+        while (currentNode != null) {
 
-        if(nodeHead == null) throw new NoSuchElementException("Linkedlist empty");
+            int mCount = m, nCount = n;
 
-        while (current != null){
-
-            count = count == n ? m : n;
-
-            if(count == m){
-                while (count != 0){
-                    previous = current;
-                    current = current.next;
-                    count--;
-                    if(current == null) break;
-                }
-                count = m;
-                continue;
+            while (currentNode != null && mCount != 0) {
+                lastMNode = currentNode;
+                currentNode = currentNode.next;
+                mCount--;
             }
 
-            if(count == n){
-                while (count != 0){
-                    previous.next = current.next;
-                    current = current.next;
-                    count--;
-                    if(current == null) break;
-                }
-                previous = current;
-                count = n;
-                continue;
+            while (currentNode != null && nCount != 0) {
+                currentNode = currentNode.next;
+                nCount--;
             }
+
+            lastMNode.next = currentNode;
         }
-        current = nodeHead;
+        Node current = nodeHead;
 
         while (current != null){
             System.out.print(current.value + ", ");
