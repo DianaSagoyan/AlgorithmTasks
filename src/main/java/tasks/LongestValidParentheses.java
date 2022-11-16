@@ -16,21 +16,20 @@ public class LongestValidParentheses {
 
     public static int longestValidParentheses(String str) {
 
-        Stack<Integer> stack = new Stack<>();
-        int count = 0;
-
+        if(str==null){
+            return 0;
+        }
+        Stack<Integer> stack = new Stack();
+        int result = 0;
+        stack.push(-1);
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == '('){
+            if (str.charAt(i) == ')' && stack.size() > 1 && str.charAt(stack.peek()) == '(') {
+                stack.pop();
+                result = Math.max(result, i - stack.peek());
+            } else {
                 stack.push(i);
             }
-
-            else if (str.charAt(i) == ')' && stack.size() < 2 || str.charAt(i) == ')' && i == str.length() - 1) {
-                int item = stack.pop();
-                count += i - item + 1;
-            } else if(str.charAt(i) == ')' && stack.size() > 1){
-                stack.pop();
-            }
         }
-        return count;
+        return result;
     }
 }
