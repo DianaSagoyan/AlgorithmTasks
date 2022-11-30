@@ -18,6 +18,6 @@ public class IsPalindromeNumber {
             result = result * 10 + digit;
             duplicate /= 10;
         }
-        return duplicate == num;
+        return result == num;
     }
 }
