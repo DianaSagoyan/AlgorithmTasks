@@ -4,20 +4,14 @@ import java.util.Arrays;
 
 public class MissingNumberFromARange {
     public static void main(String[] args) {
-        int[] nums = {0, 1, 3, 5, 6, 7, 9, 8};
+        int[] nums = {0, 1, 2, 4};
 
         System.out.println(missingNumber(nums));
     }
 
     public static int missingNumber(int[] nums){
 
-        int num = 0;
-
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] > num) num = nums[i];
-        }
-
-        if(nums.length > num) return nums.length;
+        int num = nums.length;
 
         while (num >= 0){
             for (int i = 0; i < nums.length; i++) {
@@ -26,7 +20,7 @@ public class MissingNumberFromARange {
             }
             num--;
         }
-        return 0;
+        return nums.length;
     }
 
 }
