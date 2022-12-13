@@ -32,12 +32,9 @@ public class FrequencyOfWords {
                 } else {
                     result.put(text.substring(nonChar), result.getOrDefault(text.substring(nonChar, letter), 0) + 1);
                 }
-
-
             }
 
         }
-
         return result;
     }
 }
