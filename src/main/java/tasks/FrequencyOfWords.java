@@ -15,7 +15,6 @@ public class FrequencyOfWords {
 
         int nonChar = 0;
         int letter = 0;
-        String resStr = "";
 
         while (letter != text.length() - 1){
             if(!Character.isLetter(text.charAt(nonChar))){
@@ -33,7 +32,6 @@ public class FrequencyOfWords {
                     result.put(text.substring(nonChar), result.getOrDefault(text.substring(nonChar, letter), 0) + 1);
                 }
             }
-
         }
         return result;
     }
