@@ -16,7 +16,7 @@ public class StringToInteger {
         for (int i = 0; i < arr.length; i++) {
             result += Math.pow(10, arr.length - 1 - i) * ((int)str.charAt(i) - 48);
         }
-        
+
         return result;
     }
 }
