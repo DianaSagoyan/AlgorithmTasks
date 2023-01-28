@@ -4,7 +4,7 @@ public class StringToInteger {
     //  write a program that can convert a string to integer. DO NOT use parse or valueOf methods
 
     public static void main(String[] args) {
-        String str = "1723466";
+        String str = "517";
         System.out.println(stringToIntegerConvert(str));
     }
 
