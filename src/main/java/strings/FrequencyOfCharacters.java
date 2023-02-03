@@ -29,7 +29,6 @@ public class FrequencyOfCharacters {
                 pointer1 = pointer2;
             }
         }
-
         result += arr[pointer1] + "" + count;
         return result;
     }
