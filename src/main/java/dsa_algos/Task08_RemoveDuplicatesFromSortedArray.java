@@ -1,5 +1,8 @@
 package dsa_algos;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Task08_RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
         //Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique
