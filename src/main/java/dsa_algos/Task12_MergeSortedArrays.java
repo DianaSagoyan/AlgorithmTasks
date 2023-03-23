@@ -18,14 +18,14 @@ public class Task12_MergeSortedArrays {
 
         // And move i backwards from end through the array
         // write the smallest value pointed at by p1 or p2 to nums1.
-        for (int p = m + n - 1; p >= 0; p--) {
+        for (int i = m + n - 1; i >= 0; i--) {
             if (ptr2 < 0) {
                 break;
             }
             if (ptr1 >= 0 && nums1[ptr1] > nums2[ptr2]) {
-                nums1[p] = nums1[ptr1--];
+                nums1[i] = nums1[ptr1--];
             } else {
-                nums1[p] = nums2[ptr2--];
+                nums1[i] = nums2[ptr2--];
             }
         }
         System.out.println(Arrays.toString(nums1));
