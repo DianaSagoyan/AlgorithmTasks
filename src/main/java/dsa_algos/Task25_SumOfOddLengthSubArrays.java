@@ -5,7 +5,7 @@ public class Task25_SumOfOddLengthSubArrays {
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(sumOfOddSubArray(arr));
     }
-    
+
     public static int sumOfOddSubArray(int[] arr){
         int sum=0;
         int n = arr.length;
