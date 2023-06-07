@@ -5,7 +5,7 @@ public class Task35_PalindormeNumber {
     //palindrome
     //, and false otherwise.
     public static void main(String[] args) {
-        int num = 121;
+        int num = -121;
         System.out.println(palindromeNumber(num));
     }
 
