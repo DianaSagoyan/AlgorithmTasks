@@ -11,7 +11,7 @@ public class Task39_3Sum {
         //
         //Notice that the solution set must not contain duplicate triplets.
 
-        
+
         //https://www.youtube.com/watch?v=Ca7k53qcTic
 
         int[] nums = {-1, 0, 1, 2, -1, -4};
