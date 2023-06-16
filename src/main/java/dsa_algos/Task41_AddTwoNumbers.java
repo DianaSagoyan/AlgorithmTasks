@@ -9,7 +9,7 @@ public class Task41_AddTwoNumbers {
         //You may assume the two numbers do not contain any leading zero, except the number 0 itself.
         //https://www.youtube.com/watch?v=qE9KOe3Fu7Q
 
-        
+
         ListNode node1 = new ListNode(9);
         ListNode node2 = new ListNode(9);
         ListNode node3 = new ListNode(9);
