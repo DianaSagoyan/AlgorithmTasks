@@ -8,6 +8,7 @@ public class Task69_SumOfTwoIntegers {
         System.out.println(sumOfTwoIntegers(a,b));
     }
 
+    //Using Bitwise operators
     public static int sumOfTwoIntegers(int a, int b){
         while(b != 0){
             int carry = a & b;
