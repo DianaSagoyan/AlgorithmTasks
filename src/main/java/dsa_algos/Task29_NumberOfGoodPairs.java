@@ -2,6 +2,10 @@ package dsa_algos;
 
 public class Task29_NumberOfGoodPairs {
     public static void main(String[] args) {
+        //Given an array of integers nums, return the number of good pairs.
+        //
+        //A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+        
         int[] nums = {1, 2, 3, 1, 1, 3};
         System.out.println(numberPairs(nums));
     }
